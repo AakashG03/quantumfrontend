@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Quicksand-Medium;
+    src: url("../assets/Quicksandfont/Quicksand_font_1/static/Quicksand-Medium.ttf");
+  }
+body{
+    margin: 0px;
+    background-color: #EEEEEE;
+    font-family: Quicksand-Medium;
+    padding-bottom: 30px;
+}
+#navbar_container{
+    background: url('../assets/headerpatternimage.png');
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset 0 0 1000px rgba(12, 30, 51,0.8);
+    border-bottom: 2px solid #31B9E4;
+    margin-bottom: 26px;
+}
+#nav_img{
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+#user_logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: white;
+    background-color: #3C4E62;
+    border: 2px solid #3FD28B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    padding-inline: 16px;
+}
+.content_container{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 16px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px #0000003D;
+}
+.content_container div{
+    grid-column-start: 1;
+}
+.title{
+    font-size: 18px;
+    color: #3FD28B;
+    padding-block: 16px;
+}
+label{
+    font-size: 12px;
+    color: #666666;
+}
+.dt,.course_names{
+    display:flex;
+}
+.dt div,.course_names div{
+    padding-right: 9px;
+    padding-top: 8px;
+}
+.roles_container{
+    padding-bottom: 16px;
+}
+.course_logo{
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.course_btn{
+    background-color: #3FD28B;
+    padding-inline: 16px;
+    padding-block:5px ;
+}
+.btn_container{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    opacity:0.2;
+}
+@media screen and (min-width:1024px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 976px 1fr;
+    }
+    #navbar_container{
+        grid-column: span 3;
+    }
+    .grid_container{
+        grid-column: 2/3;
+    }
+}

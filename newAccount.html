@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/newAccount.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="navbar_container">
+      <div id="nav_img">
+        <img src="./asset/Zeus-LMS-logo.svg" />
+      </div>
+    </div>
+    <div class="menu_container">
+      <div class="menu_back_btn"><img src="./assets/icons/back.svg" /></div>
+      <div class="menu_title">Create An Account</div>
+      <div class="menu_btn1">CANCEL</div>
+      <div class="menu_btn2">CREATE</div>
+    </div>
+    <div class="process_container">
+      <div>
+        <div class="span">1</div>
+        <div>Personal Information</div>
+      </div>
+      <div><hr /></div>
+      <div>
+        <div class="span">2</div>
+        <div>Qualification</div>
+      </div>
+      <div><hr /></div>
+      <div>
+        <div class="span">3</div>
+        <div>Review and Proceed</div>
+      </div>
+    </div>
+    <div class="form_container">
+      <div class="form_container_1" style="display: none">
+        <div>
+          <form>
+            <label class="labelsize" for="firstname">First Name*</label><br />
+            <input class="no_border" type="text" id="firstname" /><br />
+            <label class="labelsize" for="lastname">Last Name*</label><br />
+            <input class="no_border" type="text" id="lastname" /><br />
+            <label class="labelsize" for="email">Email*</label><br />
+            <input class="no_border" type="text" id="email" /><br />
+            <label class="labelsize" for="phone">Phone Number*</label><br />
+            <div class="phone_container">
+              +<input
+                class="no_border"
+                type="number"
+                maxlength="2"
+                value="91"
+              />
+              <input class="no_border" type="number" maxlength="10" />
+            </div>
+            <div class="resume_container">
+              <div><img src="./asset/Upload_black_24dp.svg" /></div>
+              <div>UPLOAD RESUME</div>
+            </div>
+            <div class="portfolio_container">
+              <label class="labelsize" for="url"
+                >Enter Portfolio URL (if any)</label
+              ><br />
+              <input class="no_border" type="text" id="url" />
+            </div>
+            <div class="roles_container">
+              <label class="labelsize" for="roles">Preferred Job Roles*</label
+              ><br />
+              <input type="checkbox" name="role1" id="role1" checked /><label
+                for="role1"
+                style="font-size: 16px"
+                >Instructional Designer</label
+              ><br />
+              <input type="checkbox" name="role2" id="role2" /><label
+                for="role2"
+                style="font-size: 16px"
+                >Software Engineer</label
+              ><br />
+              <input type="checkbox" name="role3" id="role3" checked /><label
+                for="role3"
+                style="font-size: 16px"
+                >Software Quality Engineer</label
+              ><br />
+            </div>
+            <div class="portfolio_container">
+              <label class="labelsize" for="referral"
+                >If You Are Registering Via A Referral, Please Mention Full Name
+                Of The Employee Who Referred You</label
+              ><br />
+              <input class="no_border" type="text" id="referral" />
+            </div>
+            <div class="update_container">
+              <input type="checkbox" name="update" id="update" checked /><label
+                class="labelsize"
+                for="update"
+                >Send me job related updates via mail</label
+              ><br />
+            </div>
+          </form>
+        </div>
+        <div class="user_img_container">
+          <div class="user_img">
+            <img src="./assets/icons8-user-64.png" />
+          </div>
+          <div style="text-align: center; font-size: 12px; color: #1f7a54">
+            UPLOAD DISPLAY PICTURE
+          </div>
+          <div><label>Max. image size: 5 MB</label></div>
+        </div>
+      </div>
+      <div class="form_container_2" style="display: none">
+        <div class="title_container">
+          <div class="title">Educational Qualification</div>
+          <div class="title_arrow">
+            <img class="green" src="./asset/expand_less_black_24dp.svg" />
+          </div>
+        </div>
+        <div>
+          <form class="education_container">
+            <div>
+              <label class="labelsize" for="percent"
+                >Aggregate Percentage*</label
+              ><br />
+              <input class="no_border" type="text" id="percent" />
+            </div>
+            <div>
+              <label class="labelsize" for="year">Year Of Passing*</label><br />
+              <select class="no_border select" name="year" id="year">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+              </select>
+            </div>
+            <div>
+              <label class="labelsize" for="qualification">Qualification*</label
+              ><br />
+              <select
+                class="no_border select"
+                name="qualification"
+                id="qualification"
+              >
+                <option>B.E</option>
+                <option>B.Tech</option>
+              </select>
+            </div>
+            <div>
+              <label class="labelsize" for="stream">Stream*</label><br />
+              <select class="no_border select" name="stream" id="stream">
+                <option>Information Technology</option>
+                <option>Computer Engineering</option>
+              </select>
+            </div>
+            <div>
+              <label class="labelsize" for="college">College*</label><br />
+              <select class="no_border select" name="college" id="college">
+                <option>PIT</option>
+                <option>MIT</option>
+              </select>
+            </div>
+            <div>
+              <label class="labelsize" for="other"
+                >If others, please enter your college name</label
+              ><br />
+              <input
+                class="no_border"
+                type="text"
+                id="other"
+                style="width: 100%"
+              />
+            </div>
+            <div>
+              <label class="labelsize" for="clgloc"
+                >Where is your college located?*</label
+              ><br />
+              <input class="no_border" type="text" id="clgloc" />
+            </div>
+          </form>
+        </div>
+        <div class="title_container" style="margin-top: 24px">
+          <div class="title">Professional Qualification</div>
+          <div class="title_arrow">
+            <img class="green" src="./asset/expand_less_black_24dp.svg" />
+          </div>
+        </div>
+        <div>
+          <form
+            class="professional_container"
+            style="display: inline-block; width: 100%"
+          >
+            <div>
+              <label class="labelsize">Applicant Type*</label><br />
+              <input type="radio" id="fresher" value="Fresher" name="exp" />
+              <label for="fresher" style="margin-right: 14px">Fresher</label>
+              <input
+                name="exp"
+                type="radio"
+                id="experienced"
+                value="Experienced"
+              />
+              <label for="experienced">Experienced</label>
+            </div>
+          </form>
+        </div>
+        <div style="margin-top: 8px">
+          <form class="professional_container" style="display: none">
+            <div>
+              <label class="labelsize" for="expyears"
+                >Years Of Experience*</label
+              ><br />
+              <input class="no_border" type="text" id="expyears" />
+            </div>
+            <div>
+              <label class="labelsize" for="currctc"
+                >Current CTC* (In Rupees)</label
+              ><br />
+              <input class="no_border" type="text" id="currctc" />
+            </div>
+            <div>
+              <label class="labelsize" for="expctc"
+                >Expected CTC* (In Rupees)</label
+              ><br />
+              <input class="no_border" type="text" id="expctc" />
+            </div>
+            <div>
+              <label class="labelsize" for="exptech" style="margin-bottom: 10px"
+                >Select All The Technologies You Expertise In*</label
+              ><br />
+              <input
+                type="checkbox"
+                id="exp_js"
+                name="exp_js"
+                value="Javascript"
+              />
+              <label for="exp_js">Javascript</label><br />
+              <input
+                type="checkbox"
+                id="exp_ajs"
+                name="exp_ajs"
+                value="Angular JS"
+              />
+              <label for="exp_ajs">Angular JS</label><br />
+              <input
+                type="checkbox"
+                id="exp_rjs"
+                name="exp_rjs"
+                value="React"
+              />
+              <label for="exp_rjs">React</label><br />
+              <input
+                type="checkbox"
+                id="exp_njs"
+                name="exp_njs"
+                value="Node JS"
+              />
+              <label for="exp_njs">Node JS</label><br />
+              <input
+                type="checkbox"
+                id="exp_ojs"
+                name="exp_ojs"
+                value="Others"
+              />
+              <label for="exp_ojs">Others</label><br />
+            </div>
+            <div>
+              <label class="labelsize" for="exptech"
+                >If others, please mention</label
+              ><br />
+              <input
+                class="no_border"
+                type="text"
+                id="exptech"
+                style="width: 100%"
+              />
+            </div>
+            <div>
+              <label class="labelsize" for="exptech" style="margin-bottom: 10px"
+                >Select All The Technologies You Familiar In</label
+              ><br />
+              <input
+                type="checkbox"
+                id="fam_js"
+                name="fam_js"
+                value="Javascript"
+              />
+              <label for="fam_js">Javascript</label><br />
+              <input
+                type="checkbox"
+                id="ajs"
+                name="fam_ajs"
+                value="Angular JS"
+              />
+              <label for="fam_ajs">Angular JS</label><br />
+              <input
+                type="checkbox"
+                id="fam_rjs"
+                name="fam_rjs"
+                value="React"
+              />
+              <label for="fam_rjs">React</label><br />
+              <input
+                type="checkbox"
+                id="fam_njs"
+                name="fam_njs"
+                value="Node JS"
+              />
+              <label for="fam_njs">Node JS</label><br />
+              <input
+                type="checkbox"
+                id="fam_ojs"
+                name="fam_ojs"
+                value="Others"
+              />
+              <label for="fam_ojs">Others</label><br />
+            </div>
+            <div>
+              <label class="labelsize" for="famtech"
+                >If others, please mention</label
+              ><br />
+              <input
+                class="no_border"
+                type="text"
+                id="famtech"
+                style="width: 100%"
+              />
+            </div>
+            <div>
+              <label class="labelsize" style="margin-bottom: 10px"
+                >Are you currently on notice period?*</label
+              ><br />
+              <input type="radio" id="yes" value="Yes" name="period" />
+              <label for="yes" style="margin-right: 14px">Yes</label>
+              <input type="radio" id="no" value="No" name="period" />
+              <label for="no">No</label>
+            </div>
+            <div>
+              <label class="labelsize" for="noticeend"
+                >If Yes, when will your notice period end?*</label
+              ><br />
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                "
+              >
+                <input
+                  class="no_border"
+                  type="text"
+                  id="noticeend"
+                  style="width: 100%"
+                />
+                <div style="margin: 0">
+                  <img src="./assets/icons/manage course.svg" width="10px" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="labelsize" for="college"
+                >How long is your notice period?* (Mention in months)</label
+              ><br />
+              <div>
+                <select class="no_border select" name="college" id="college">
+                  <option>1 months</option>
+                  <option>2 months</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="labelsize" style="margin-bottom: 10px"
+                >Have You Appeared For Any Test By Zeus in the past 12
+                months?*</label
+              ><br />
+              <input type="radio" id="yes" value="Yes" />
+              <label for="yes" style="margin-right: 14px">Yes</label>
+              <input type="radio" id="no" value="No" checked />
+              <label for="no">No</label>
+            </div>
+            <div>
+              <label class="labelsize" for="roleapplied"
+                >If Yes, which role did you apply for?</label
+              ><br />
+              <input
+                style="width: 100%"
+                class="no_border"
+                type="text"
+                id="roleapplied"
+              />
+            </div>
+          </form>
+        </div>
+        <div style="margin-top: 8px">
+          <form class="fresher_container" style="display: none">
+            <div>
+              <label class="labelsize" for="exptech" style="margin-bottom: 10px"
+                >Select All The Technologies You Familiar In</label
+              ><br />
+              <input
+                type="checkbox"
+                id="fam_js"
+                name="fam_js"
+                value="Javascript"
+              />
+              <label for="fam_js">Javascript</label><br />
+              <input
+                type="checkbox"
+                id="ajs"
+                name="fam_ajs"
+                value="Angular JS"
+              />
+              <label for="fam_ajs">Angular JS</label><br />
+              <input
+                type="checkbox"
+                id="fam_rjs"
+                name="fam_rjs"
+                value="React"
+              />
+              <label for="fam_rjs">React</label><br />
+              <input
+                type="checkbox"
+                id="fam_njs"
+                name="fam_njs"
+                value="Node JS"
+              />
+              <label for="fam_njs">Node JS</label><br />
+              <input
+                type="checkbox"
+                id="fam_ojs"
+                name="fam_ojs"
+                value="Others"
+              />
+              <label for="fam_ojs">Others</label><br />
+            </div>
+            <div>
+              <label class="labelsize" for="famtech"
+                >If others, please mention</label
+              ><br />
+              <input
+                class="no_border"
+                type="text"
+                id="famtech"
+                style="width: 100%"
+              />
+            </div>
+            <div>
+              <label class="labelsize" style="margin-bottom: 10px"
+                >Have You Appeared For Any Test By Zeus in the past 12
+                months?*</label
+              ><br />
+              <input type="radio" id="yes" value="Yes" />
+              <label for="yes" style="margin-right: 14px">Yes</label>
+              <input type="radio" id="no" value="No" checked />
+              <label for="no">No</label>
+            </div>
+            <div>
+              <label class="labelsize" for="roleapplied"
+                >If Yes, which role did you apply for?</label
+              ><br />
+              <input
+                style="width: 100%"
+                class="no_border"
+                type="text"
+                id="roleapplied"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="form_container_3" style="/*display: none*/">
+        <div style="display: flex;align-items: center;justify-content: space-between;">
+          <div style="margin-top: 16px; margin-inline: 12px">
+            Personal Information
+          </div>
+          <div style="padding-right: 16px;">
+            <img class="green" src="./assets/icons/edit.png" style="width: 20px" /> Edit
+          </div>
+        </div>
+        <div class="form_container_1" style="margin-top: 16px">
+          <div>
+            <form>
+              <label class="labelsize" for="firstname">First Name*</label><br />
+              <div>John</div>
+              <label class="labelsize" for="lastname">Last Name*</label><br />
+              <div>Watson</div>
+              <label class="labelsize" for="email">Email*</label><br />
+              <div>johnwatson@gmail.com</div>
+              <label class="labelsize" for="phone">Phone Number*</label><br />
+              <div class="phone_container">+914578965231</div>
+              <div class="resume_container" style="max-height: 36px">
+                <div>
+                  <img class="green" src="./asset/Upload_black_24dp.svg" />
+                </div>
+                <div>UPLOAD RESUME <span>MyResume.pdf</span></div>
+              </div>
+              <div class="portfolio_container">
+                <label class="labelsize" for="url"
+                  >Enter Portfolio URL (if any)</label
+                ><br />
+                <div>www.portfolio.com</div>
+              </div>
+              <div class="roles_container">
+                <label class="labelsize" for="roles">Preferred Job Roles*</label
+                ><br />
+                <div>Instructional Designer</div>
+                <div>Software Quality Engineer</div>
+              </div>
+              <div class="portfolio_container">
+                <label class="labelsize" for="referral"
+                  >If You Are Registering Via A Referral, Please Mention Full
+                  Name Of The Employee Who Referred You</label
+                ><br />
+                <div>-</div>
+              </div>
+              <div class="update_container">
+                <input
+                  type="checkbox"
+                  name="update"
+                  id="update"
+                  checked
+                /><label class="labelsize" for="update"
+                  >Send me job related updates via mail</label
+                ><br />
+              </div>
+            </form>
+          </div>
+          <div class="user_img_container">
+            <img
+              class="photo"
+              src="./assets/images/imageMask-2.png"
+              style="overflow: hidden"
+            />
+          </div>
+        </div>
+        <div style="display: flex;align-items: center;justify-content: space-between;">
+          <div style="margin-top: 16px; margin-inline: 12px">
+            Qualifications
+          </div>
+          <div style="padding-right: 16px;">
+            <img class="green" src="./assets/icons/edit.png" style="width: 20px" /> Edit
+          </div>
+        </div>
+        <div class="form_container_2" style="margin-top: 16px">
+          <div class="title_container">
+            <div class="title">Educational Qualification</div>
+            <div class="title_arrow">
+              <img class="green" src="./asset/expand_less_black_24dp.svg" />
+            </div>
+          </div>
+          <div>
+            <form class="education_container">
+              <div>
+                <label class="labelsize" for="percent"
+                  >Aggregate Percentage*</label
+                ><br />
+                <div>65</div>
+              </div>
+              <div>
+                <label class="labelsize" for="year">Year Of Passing*</label
+                ><br />
+                <div>2020</div>
+              </div>
+              <div>
+                <label class="labelsize" for="qualification"
+                  >Qualification*</label
+                ><br />
+                <div>Bachelor in Technology (B.Tech)</div>
+              </div>
+              <div>
+                <label class="labelsize" for="stream">Stream*</label><br />
+                <div>Information Technology</div>
+              </div>
+              <div>
+                <label class="labelsize" for="college">College*</label><br />
+                <div>Pune Institute of Technology (PIT)</div>
+              </div>
+              <div>
+                <label class="labelsize" for="other"
+                  >If others, please enter your college name</label
+                ><br />
+                <div>-</div>
+              </div>
+              <div>
+                <label class="labelsize" for="clgloc"
+                  >Where is your college located?*</label
+                ><br />
+                <div>Pune</div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div style="margin-top: 8px; margin-inline: 12px">
+          <div class="title_container" style="margin-top: 24px">
+            <div class="title">Professional Qualification</div>
+            <div class="title_arrow">
+              <img class="green" src="./asset/expand_less_black_24dp.svg" />
+            </div>
+          </div>
+          <div>
+            <form class="professional_container">
+              <div>
+                <label class="labelsize">Applicant Type*</label><br />
+                <div>Experienced</div>
+              </div>
+            </form>
+          </div>
+          <div style="margin-top: 8px">
+            <form class="professional_container">
+              <div>
+                <label class="labelsize" for="expyears"
+                  >Years Of Experience*</label
+                ><br />
+                <div>5</div>
+              </div>
+              <div>
+                <label class="labelsize" for="currctc"
+                  >Current CTC* (In Rupees)</label
+                ><br />
+                <div>5,00,000</div>
+              </div>
+              <div>
+                <label class="labelsize" for="expctc"
+                  >Expected CTC* (In Rupees)</label
+                ><br />
+                6,50,000
+              </div>
+              <div>
+                <label
+                  class="labelsize"
+                  for="exptech"
+                  style="margin-bottom: 10px"
+                  >Select All The Technologies You Expertise In*</label
+                ><br />
+                <div>Javascript</div>
+              </div>
+              <div>
+                <label class="labelsize" for="exptech"
+                  >If others, please mention</label
+                ><br />
+                <div>-</div>
+              </div>
+              <div>
+                <label
+                  class="labelsize"
+                  for="exptech"
+                  style="margin-bottom: 10px"
+                  >Select All The Technologies You Familiar In</label
+                ><br />
+                <div>Angular JS</div>
+                <div>React</div>
+              </div>
+              <div>
+                <label class="labelsize" for="famtech"
+                  >If others, please mention</label
+                ><br />
+                <div>-</div>
+              </div>
+              <div>
+                <label class="labelsize" style="margin-bottom: 10px"
+                  >Are you currently on notice period?*</label
+                ><br />
+                <div>Yes</div>
+              </div>
+              <div>
+                <label class="labelsize" for="noticeend"
+                  >If Yes, when will your notice period end?*</label
+                ><br />
+                <div>20-May-2020</div>
+              </div>
+              <div>
+                <label class="labelsize" for="college"
+                  >How long is your notice period?* (Mention in months)</label
+                ><br />
+                <div>2 Months</div>
+              </div>
+              <div>
+                <label class="labelsize" style="margin-bottom: 10px"
+                  >Have You Appeared For Any Test By Zeus in the past 12
+                  months?*</label
+                ><br />
+                <div>No</div>
+              </div>
+              <div>
+                <label class="labelsize" for="roleapplied"
+                  >If Yes, which role did you apply for?</label
+                ><br />
+                <div>-</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center">
+      <div class="next_btn">PREVIOUS</div>
+      <!-- <div class="next_btn">NEXT</div> -->
+    </div>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>
