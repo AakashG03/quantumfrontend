@@ -1,4 +1,4 @@
-var jobdetailsmodel = new window.JobdetailsModel({ id: 2 });
+var jobdetailsmodel = new window.JobdetailsModel({ id: 1 });
 var jobdetailview1 = new window.Jobdetailview1({
   el: "#part1",
   model: jobdetailsmodel,

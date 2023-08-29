@@ -7,7 +7,6 @@ var JobdetailsModel = Backbone.Model.extend({
   fetchModel: function () {
     this.fetch({
       success: function (model) {
-        console.log(model.toJSON()["data"]);
         this.detail = model.toJSON()["data"];
         this.trigger("Model.fetched");
       }.bind(this),
