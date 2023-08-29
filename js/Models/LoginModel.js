@@ -5,8 +5,8 @@ var LoginModel = Backbone.Model.extend({
     this.save(null, {
       success: function (model) {
         this.data = model.toJSON()["data"];
-        model.trigger("Loggin.complete");
-      },
+        this.trigger("Loggin.complete");
+      }.bind(this),
     });
   },
 });

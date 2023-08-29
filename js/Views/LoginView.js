@@ -18,7 +18,8 @@ var LoginView = Backbone.View.extend({
     if (this.model.get("data") == "No Email found") {
       console.log("loggin failed");
     } else {
-      console.log("logged in");
+      sessionStorage.setItem("auth_key",this.model.data["auth_key"])
+      window.location.href = "joblist.html";
     }
   },
 });
