@@ -1,36 +1,26 @@
 var LoginView = Backbone.View.extend({
-    events: {
-      click: "onClick",
-    },
-
-    onClick: function () {
-      this.self = this;
-      self.email = $("#userEmail").val();
-      self.password = $("#userPassword").val();
-      if (self.email != null && self.password != "") {
-        this.Submit();
-      }
-    },
-    Submit: function () {
-      var loginuser = new window.LoginModel({
-        email: self.email,
-        password: self.password,
+  initialize: function () {
+    this.listenTo(this.model, "Loggin.complete", this.renderlogin);
+  },
+  events: {
+    click: "onClick",
+  },
+  onClick: function () {
+    if ($("#userEmail").val() != "" && $("#userPassword").val() != "") {
+      this.model.set({
+        email: $("#userEmail").val(),
+        password: $("#userPassword").val(),
       });
-      loginuser.save(
-        {},
-        {
-          success: function (model, response, options) {
-            if (response["data"] == "No Email found") {
-              alert("No user Found");
-            } else {
-              sessionStorage.setItem("auth_key", response["data"]["auth_key"]);
-              console.log(sessionStorage.getItem("auth_key"));
-              window.location.href = "joblist.html";
-            }
-          },
-        }
-      );
-    },
-  });
+      this.model.login();
+    }
+  },
+  renderlogin: function () {
+    if (this.model.get("data") == "No Email found") {
+      console.log("loggin failed");
+    } else {
+      console.log("logged in");
+    }
+  },
+});
 
 window.LoginView = LoginView;

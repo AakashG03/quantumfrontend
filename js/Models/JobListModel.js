@@ -1,4 +1,2 @@
-var JobListmodel = Backbone.Model.extend({
-    
-});
+var JobListmodel = Backbone.Model.extend();
 window.JobListmodel = JobListmodel;

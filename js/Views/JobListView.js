@@ -1,13 +1,15 @@
 var JobListview = Backbone.View.extend({
     initialize: function () {
-      console.log(this.collection);
+      this.collection.fetchCollection()
+      this.listenTo(this.collection,"Fetch.List",this.render)
     },
     render: function () {
       const renderTemplate = this.template();
       this.$el.html(renderTemplate);
+      console.log(this.collection.dataFetched)
     },
     template: _.template(
-      `<% _.each(this.collection,function(list){ %>
+      `<% _.each(this.collection.dataFetched,function(list){ %>
         <div class="content_container" 
         <% if(list['expire']!=null)
         {%>

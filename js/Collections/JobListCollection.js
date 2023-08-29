@@ -1,6 +1,15 @@
 var JobListcollection = Backbone.Collection.extend({
-    url: "http://backendquantum.test/walkin/joblist",
-    model: window.JobListmodel,
-  });
+  model: window.JobListmodel,
+  url: "http://backendquantum.test/walkin/joblist",
+  dataFetched:{},
+  fetchCollection: function () {
+    this.fetch({
+      success: function (collection) {
+        this.dataFetched = collection.toJSON()[0]['data'];
+        this.trigger("Fetch.List");
+      }.bind(this),
+    });
+  },
+});
 
-  window.JobListcollection = JobListcollection;
+window.JobListcollection = JobListcollection;

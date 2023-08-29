@@ -1,6 +1,7 @@
-var Detailview1 = Backbone.View.extend({
+var Jobdetailview1 = Backbone.View.extend({
   initialize: function () {
-    console.log(this.model);
+    this.model.fetchModel();
+    this.listenTo(this.model, "Model.fetched", this.render);
   },
   render: function () {
     this.$el.html(this.template());
@@ -8,23 +9,23 @@ var Detailview1 = Backbone.View.extend({
   template: _.template(
     ` 
           <div id="side_btn">
-        <div class="title"><%= this.model['job_title']%></div>
+        <div class="title"><%= this.model.detail['job_title']%></div>
         <div class="course_btn">Apply</div>
       </div>
       <div style="padding-inline: 16px; padding-top: 16px">
         <div>
           <label>Date & Time</label><br />
           <div class="dt">
-            <div><%= this.model['start_date']%> to <%= this.model['end_date']%></div>
+            <div><%= this.model.detail['start_date']%> to <%= this.model.detail['end_date']%></div>
             <div>|</div>
-            <div><label><%= this.model['location']%></label></div>
+            <div><label><%= this.model.detail['location']%></label></div>
           </div>
         </div>
         <div><hr /></div>
         <div class="roles_container">
           <label>Job Roles:</label>
           <div class="courses">
-          <% _.each(this.model['job_roles'],function(role){ %> 
+          <% _.each(this.model.detail['job_roles'],function(role){ %> 
             <div class="course_names">
               <div>
                 <img
@@ -110,13 +111,17 @@ var Detailview1 = Backbone.View.extend({
           `
   ),
 });
-var Detailview2 = Backbone.View.extend({
+var Jobdetailview2 = Backbone.View.extend({
+  initialize: function () {
+    this.model.fetchModel();
+    this.listenTo(this.model, "Model.fetched", this.render);
+  },
   render: function () {
     this.$el.html(this.template());
   },
   template: _.template(
     `
-      <% _.each(this.model['job_roles'],function(role){ %> 
+      <% _.each(this.model.detail['job_roles'],function(role){ %> 
           <div class="content_container" id="part2"style="margin-top: 24px; padding: 0">
               <div class="title_container">
                 <div class="title"><%= role['role_name']%></div>
@@ -177,5 +182,5 @@ var Detailview2 = Backbone.View.extend({
   ),
 });
 
-window.Detailview1 = Detailview1;
-window.Detailview2 = Detailview2;
+window.Jobdetailview1 = Jobdetailview1;
+window.Jobdetailview2 = Jobdetailview2;
