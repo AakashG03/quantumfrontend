@@ -145,7 +145,8 @@
               type="radio"
               name="time"
               id="time1"
-              value="time1"
+              value="9:00 AM to 11:00 AM"
+              checked
             />
             <label for="time1" style="margin-right: 14px"
               >9:00 AM to 11:00 AM</label
@@ -157,7 +158,7 @@
               type="radio"
               name="time"
               id="time2"
-              value="time2"
+              value="1:00 PM to 3:00 PM"
             />
             <label for="time2">1:00 PM to 3:00 PM</label>
           </div>
@@ -175,7 +176,7 @@
               style="accent-color: #1f7a54"
               type="checkbox"
               id="fam_js"
-              name="fam_js"
+              name="js"
               value="Javascript"
             />
             <label for="fam_js">Javascript</label><br />
@@ -184,8 +185,8 @@
             <input
               style="accent-color: #1f7a54"
               type="checkbox"
-              id="ajs"
-              name="fam_ajs"
+              id="fam_ajs"
+              name="js"
               value="Angular JS"
             />
             <label for="fam_ajs">Angular JS</label><br />
@@ -195,10 +196,10 @@
               style="accent-color: #1f7a54"
               type="checkbox"
               id="fam_rjs"
-              name="fam_rjs"
+              name="js"
               value="React"
             />
-            <label for="fam_ajs">React JS</label><br />
+            <label for="fam_rjs">React JS</label><br />
           </div>
         </div>
         <div><hr /></div>
@@ -212,7 +213,14 @@
               src="./asset/Upload_black_24dp.svg"
             />
           </div>
-          <div>UPLOAD UPDATED RESUME</div>
+          <!-- <div>UPLOAD UPDATED RESUME</div> -->
+          <input type="file" id="upload" style="display: none" />
+          <a
+            href=""
+            id="upload_link"
+            style="text-decoration: none; color: #3fd28b"
+            >UPLOAD UPDATED RESUME</a
+          >
         </div>
       </div>
       <!-- part 4 -->
@@ -314,8 +322,14 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"
     ></script>
     <script type="text/javascript" src="./js/Models/CheckAuthModel.js"></script>
-    <script type="text/javascript" src="./js/Models/JobDetailsModel.js"></script>
-    <script type="text/javascript" src="./js/Templates/JobDetailsTemplate.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/Models/JobDetailsModel.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/Templates/JobDetailsTemplate.js"
+    ></script>
     <script type="text/javascript" src="./js/Views/JobDetailsView.js"></script>
     <script type="text/javascript" src="./js/jobdetails.js"></script>
   </body>

@@ -60,7 +60,7 @@ const joblisttemplate = `<% _.each(this.collection.dataFetched,function(list){ %
     </div>
     <%}%> 
     <div class="btn_container">
-      <button type="button" class="course_btn"><a data-id="<%= list['id']%>" style="text-decoration:none;color:black">VIEW MORE DETAILS</a></button>
+      <button type="button" data-job-id ="<%= list['id']%>" class="course_btn"><a style="text-decoration:none;color:black">VIEW MORE DETAILS</a></button>
     </div>
   </div>
   <% });%>

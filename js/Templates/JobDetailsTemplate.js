@@ -1,7 +1,7 @@
 const jobdetailstemplate1 = ` 
 <div id="side_btn">
 <div class="title"><%= this.model.detail['job_title']%></div>
-<div class="course_btn">Apply</div>
+<button class="course_btn">Apply</button>
 </div>
 <div style="padding-inline: 16px; padding-top: 16px">
 <div>
@@ -43,6 +43,7 @@ padding-top: 8px;
 padding-bottom: 16px;
 font-size: 14px;
 "
+class="information"
 >
 <div style="padding-block: 10px">
 <label>General Instructions :</label>
@@ -104,14 +105,14 @@ window.jobdetailstemplate1 = jobdetailstemplate1;
 
 const jobdetailstemplate2 = `
 <% _.each(this.model.detail['job_roles'],function(role){ %> 
-    <div class="content_container" id="part2"style="margin-top: 24px; padding: 0">
+    <div class="content_container" style="margin-top: 24px; padding: 0">
         <div class="title_container">
           <div class="title"><%= role['role_name']%></div>
-          <div class="title_arrow">
+          <div class="title_arrow" id="<%=role['id']%>">
             <img class="green" src="./asset/expand_less_black_24dp.svg" />
           </div>
         </div>
-        <div style="padding-inline: 16px; padding-bottom: 16px">
+        <div style="padding-inline: 16px; padding-bottom: 16px" class="roleinformation"  id="<%=role['id']%>">
           <div style="padding-block: 10px">
             <label>Gross compensation package :</label>
           </div>

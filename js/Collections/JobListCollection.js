@@ -2,6 +2,7 @@ var JobListcollection = Backbone.Collection.extend({
   model: window.JobListmodel,
   url: "http://backendquantum.test/walkin/joblist",
   dataFetched:{},
+  paramId: null,
   fetchCollection: function () {
     this.fetch({
       success: function (collection) {

@@ -19,6 +19,7 @@ var LoginView = Backbone.View.extend({
       console.log("loggin failed");
     } else {
       sessionStorage.setItem("auth_key",this.model.data["auth_key"])
+      sessionStorage.setItem("user_id",this.model.data["id"])
       window.location.href = "joblist.html";
     }
   },
